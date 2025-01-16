@@ -116,14 +116,19 @@ const GPACalculator = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor={`credits-${index}`}>Credit Hours</Label>
-                      <Input
-                        id={`credits-${index}`}
-                        type="number"
-                        min="1"
+                      <Select
                         value={course.creditHours}
-                        onChange={(e) => handleCourseUpdate(index, 'creditHours', e.target.value)}
-                        placeholder="Credit Hours"
-                      />
+                        onValueChange={(value) => handleCourseUpdate(index, 'creditHours', value)}
+                      >
+                        <SelectTrigger>
+                          <SelectValue placeholder="Select credit hours" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="1">1</SelectItem>
+                          <SelectItem value="2">2</SelectItem>
+                          <SelectItem value="3">3</SelectItem>
+                        </SelectContent>
+                      </Select>
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor={`grade-${index}`}>Grade</Label>
