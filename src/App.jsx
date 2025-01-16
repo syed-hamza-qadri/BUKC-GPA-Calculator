@@ -195,6 +195,15 @@ const GPACalculator = () => {
             </div>
           )}
         </CardContent>
+         <CardFooter className="flex flex-col space-y-2 text-sm text-gray-500 border-t pt-4">
+          <div className="text-center">
+            Developed by{' '}
+            <span className="font-medium text-gray-700">Syed Hamza Qadri</span>
+          </div>
+          <div className="text-center text-xs">
+            Based on BUKC Grade System
+          </div>
+        </CardFooter>
       </Card>
     </div>
   );
